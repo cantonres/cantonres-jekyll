@@ -1,7 +1,6 @@
 ---
-layout: tutorial
+id: portal
 title: 门泉 (Portal)
-chapter: 2
 ---
 
 # Portal

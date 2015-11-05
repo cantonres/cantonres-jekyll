@@ -1,7 +1,6 @@
 ---
-layout: tutorial
+id: hack
 title: 入侵
-chapter: 3
 ---
 
 # Hacking

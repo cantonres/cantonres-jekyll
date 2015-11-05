@@ -2,16 +2,19 @@
 layout: default
 ---
 <nav id="toc">
-	丑陋的目录君（不要在意这些细节）
+	目录
 	<ol>
-	{% assign tutorials = site.tutorial | sort: "chapter" %}
-	{% for tutorial in tutorials %}
-		{% if page.url == tutorial.url %}
-			<li>⚷ {{ tutorial.title }}</li>
-		{% else %}
-			<li><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></li>
-		{% endif %}
+	{% for id in site.data.tutorials %}
+		{% assign matched = site.tutorial | where: "id", id %}
+		{% for tutorial in matched %}
+			{% if page.url == tutorial.url %}
+				<li>⚷ {{ tutorial.title }}</li>
+			{% else %}
+				<li><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></li>
+			{% endif %}
+		{% endfor %}
 	{% endfor %}
 	</ol>
 </nav>
+
 {{ content }}

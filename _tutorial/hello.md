@@ -1,12 +1,11 @@
 ---
-layout: tutorial
+id: hello
 title: 欢迎
-chapter: 1
 permalink: /tutorial/
 ---
 
 # 测试测试～
-把这个`hello.md`拷贝到一个新文件，就可以自由编写了。目录会自动更新，显示顺序由`chapter`元数据而定。
+把这个`hello.md`拷贝到一个新文件，就可以自由编写了。写完之后，在`/_data/tutorials.yml`中加上页面的`id`就可以了。
 
 `portal.md`包含提示框样式的使用方法。`hack.md`会告诉你如何创建页面间的链接。
 

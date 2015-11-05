@@ -15,3 +15,10 @@ kramdown:
 collections:
   tutorial:
     output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: tutorial
+    values:
+      layout: tutorial
