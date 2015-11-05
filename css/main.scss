@@ -5,14 +5,14 @@
 
 html, body {
 	width: 100%;
-/*	background-color: #0B0C0D;*/
-	background-color: white;
-	color: black;
+	background-color: #333;
+	color: #ddd;
 	font-family: 'roboto', helvetica, arial;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #16746f;
+	color: #f8f8ff;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	margin-bottom: 10px;
 }
 
@@ -20,12 +20,24 @@ h1, h2 {
 	text-align: center;
 }
 
+ol {
+	counter-reset: item;
+	li {
+		display: block;
+	}
+	li:before {
+		content: counter( item ) ". ";
+		counter-increment: item;
+		color: #ddd;
+	}
+}
+
 p {
 	margin-top: 10px;
 }
 
 a {
-	color: #16476f;
+	color: #ccc;
 }
 
 hr {
@@ -59,26 +71,31 @@ img {
 }
 
 #content {
-	padding: 100px 50px 50px 50px;
+	background-color: #444;
+	border-radius: 5px;
+	padding: 20px 50px 50px 50px;
+	margin-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 800px;
 }
 
 #toc {
-	border: 1px solid #468990;
+	background-color: #555;
+	border-radius: 5px;
 	margin-bottom: 10px;
 	padding: 10px 10px 10px 50px;
 }
 
 .note {
-	border: 2px solid #468990;
+	background-color: rgba( 70, 137, 144, 0.4 );
+	border-radius: 5px;
 	margin: 10px;
 	padding: 10px 10px 10px 25px;
 }
 
 .warning {
-	border: 2px solid orange;
+	background-color: rgba(255, 165, 0, 0.4);
 }
 
 .ingress-separator {
@@ -87,12 +104,13 @@ img {
 	width: 100%;
 	padding-top: 10px;
 	position: absolute;
+	top: 0;
 	.left {
-		border-top: 1px solid #16476f;
+		border-top: 1px solid #ddd;
 	}
 
 	.right {
-		border-bottom: 1px solid #16476f;
+		border-bottom: 1px solid #ddd;
 	}
 
 	.center {
@@ -101,9 +119,9 @@ img {
 		position: absolute;
 		left: 50%;
 		margin-left: -18px;
-		border-left: 2px solid #16476f;
-		border-bottom: 1px solid #16476f;
-		border-top: 1px solid white;
+		border-left: 2px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #333;
 
 		transform: skew(50deg);
 		-webkit-transform: skew(50deg);
