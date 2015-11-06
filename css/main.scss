@@ -58,13 +58,22 @@ img {
 	margin: 10px;
 }
 
-*{
+pre {
+	background-color: #555;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+}
+
+* {
 	margin: 0;
 	padding: 0;
 
+	/*
 	transition: all 0.25s ease-out;
 	-moz-transition: all 0.25s ease-out;
 	-webkit-transition: all 0.25s ease-out;
+	*/
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -80,11 +89,27 @@ img {
 	max-width: 800px;
 }
 
+@media (max-width: 800px) {
+	#content {
+		border-radius: 0;
+	}
+}
+
 #toc {
 	background-color: #555;
 	border-radius: 5px;
 	margin-bottom: 10px;
 	padding: 10px 10px 10px 50px;
+}
+
+@media (min-width: 1400px) {
+	#toc {
+		background-color: #444;
+		position: absolute;
+		width: 250px;
+		left: 50px;
+		top: 100px;
+	}
 }
 
 .note {
