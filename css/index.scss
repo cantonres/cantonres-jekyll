@@ -117,6 +117,18 @@ html, body{
 	}
 }
 
+.content .ingress-button {
+	min-width: 180px;
+}
+
+#social-buttons {
+	margin: 20px;
+	img {
+		height: 50px;
+		margin: 5px;
+	}
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 520px){
 

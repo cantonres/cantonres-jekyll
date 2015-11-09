@@ -116,7 +116,7 @@ pre {
 	background-color: rgba( 70, 137, 144, 0.4 );
 	border-radius: 5px;
 	margin: 10px;
-	padding: 10px 10px 10px 25px;
+	padding: 10px 10px 20px 25px;
 }
 
 .warning {
@@ -209,18 +209,23 @@ pre {
 	z-index: 4;
 }
 
-.left {
+img.left {
 	float: left;
 }
 
-.center {
-	float: center;
+img.center {
+	display: block;
+	margin: 10px auto 10px auto;
 }
 
-.right {
+img.right {
 	float: right;
 }
 
-.small {
+img.small {
 	max-width: 30%;
+}
+
+img.medium {
+	max-width: 60%;
 }
